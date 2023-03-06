@@ -7,7 +7,7 @@
 sudo apt install -y xorg xbacklight xbindkeys xvkbd xinput xorg-dev
 
 # INCLUDES make,etc.
-sudo apt install -y python3-pip
+sudo apt install -y python3-pip python-dbus-dev
 
 # Microcode for Intel/AMD 
 # sudo apt install -y amd64-microcode
@@ -97,7 +97,6 @@ d="${a}${b}${c}"
 echo "$d" | sudo tee -a /usr/share/xsessions/qtile.desktop
 
 ## Qtile install dependencies
-sudo apt install -y python-dbus-dev
 pip3 install xcffib
 pip3 install --no-cache-dir cairocffi
 
