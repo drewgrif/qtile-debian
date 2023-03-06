@@ -23,7 +23,7 @@ sudo apt install -y lxappearance
 sudo apt install -y pcmanfm
 
 # Network File Tools/System Events
-sudo apt install -y dialog mtools dosfstools avahi-daemon acpi acpid gvfs-backends xfce4-power-manager 
+sudo apt install -y dialog mtools dosfstools avahi-daemon acpi acpid gvfs-backends xfce4-power-manager
 
 sudo systemctl enable avahi-daemon
 sudo systemctl enable acpid
@@ -72,11 +72,8 @@ sudo apt install fonts-font-awesome fonts-ubuntu fonts-liberation2 fonts-liberat
 xdg-user-dirs-update
 
 # Install Lightdm Console Display Manager
-sudo apt install -y lightdm lightdm-gtk-greeter-settings slick-greeter
+sudo apt install -y lightdm lightdm-gtk-greeter-settings
 sudo systemctl enable lightdm
-echo 'greeter-session=slick-greeter' >>  sudo tee -a /etc/lightdm/lightdm.conf
-echo 'greeter-hide-user=false' >>  sudo tee -a /etc/lightdm/lightdm.conf
-
 
 # XSessions and dwm.desktop
 if [[ ! -d /usr/share/xsessions ]]; then
