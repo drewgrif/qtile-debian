@@ -106,8 +106,6 @@ git clone https://github.com/qtile/qtile
 cd qtile
 pip3 install .
 
-# add line to qtile path in .bashrc file
-echo 'PATH="${HOME}/.local/bin:${PATH}"' >> ~/.bashrc
 
 # Install Nerd Fonts
 source ~/qtile-debian/nerdfonts.sh
