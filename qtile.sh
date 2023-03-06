@@ -7,7 +7,7 @@
 sudo apt install -y xorg xbacklight xbindkeys xvkbd xinput xorg-dev
 
 # INCLUDES make,etc.
-sudo apt install -y python3-pip 
+sudo apt install -y python3-pip
 
 # Microcode for Intel/AMD 
 # sudo apt install -y amd64-microcode
@@ -20,7 +20,7 @@ sudo apt install -y network-manager-gnome
 sudo apt install -y lxappearance 
 
 # File Manager (eg. pcmanfm,krusader,thunar)
-sudo apt install -y pcmanfm
+sudo apt install -y thunar
 
 # Network File Tools/System Events
 sudo apt install -y dialog mtools dosfstools avahi-daemon acpi acpid gvfs-backends xfce4-power-manager
@@ -29,7 +29,7 @@ sudo systemctl enable avahi-daemon
 sudo systemctl enable acpid
 
 # Terminal (eg. terminator,kitty)
-sudo apt install -y tilix
+sudo apt install -y xfce4-terminal
 
 # Sound packages
 sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
@@ -58,7 +58,7 @@ sudo apt install -y firefox-esr
 sudo apt install -y feh
 # sudo apt install -y nitrogen 
 
-# Packages needed dwm after installation
+# Packages needed qtile after installation
 sudo apt install -y picom numlockx dmenu rofi dunst libnotify-bin unzip policykit-1-gnome scrot
 
 # Command line text editor -- nano preinstalled  -- I like micro but vim is great
@@ -72,7 +72,7 @@ sudo apt install fonts-font-awesome fonts-ubuntu fonts-liberation2 fonts-liberat
 xdg-user-dirs-update
 
 # Install Lightdm Console Display Manager
-sudo apt install -y lightdm lightdm-gtk-greeter-settings
+sudo apt install -y lightdm
 sudo systemctl enable lightdm
 
 # XSessions and dwm.desktop
@@ -82,11 +82,10 @@ fi
 
 cat > ./temp << "EOF"
 [Desktop Entry]
-Encoding=UTF-8
 Name=Qtile
-Comment=Dynamic window manager
-Icon=Qtile
+Comment=Qtile Session
 Type=Application
+Keywords=wm;tiling
 EOF
 sudo cp ./temp /usr/share/xsessions/qtile.desktop;rm ./temp
 
