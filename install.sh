@@ -72,7 +72,7 @@ sudo apt install fonts-font-awesome fonts-ubuntu fonts-liberation2 fonts-liberat
 xdg-user-dirs-update
 
 ## Qtile install dependencies
-python-dbus-dev
+sudo apt install -y python-dbus-dev
 pip3 install xcffib
 pip3 install --no-cache-dir cairocffi
 
