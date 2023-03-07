@@ -4,7 +4,7 @@
 # Install packages after installing base Debian with no GUI
 
 # xorg display server installation
-sudo apt install -y xorg xbacklight xbindkeys xvkbd xinput xorg-dev
+sudo apt install -y xorg
 
 # INCLUDES make,etc.
 sudo apt install -y python3-pip 
@@ -59,7 +59,7 @@ sudo apt install -y feh
 # sudo apt install -y nitrogen 
 
 # Packages needed qtile after installation
-sudo apt install -y picom numlockx dmenu rofi dunst libnotify-bin unzip policykit-1-gnome scrot
+sudo apt install -y picom suckless-tools dunst libnotify-bin unzip scrot
 
 # Command line text editor -- nano preinstalled  -- I like micro but vim is great
 sudo apt install -y micro
@@ -83,15 +83,15 @@ cd qtile
 pip3 install .
 
 ## add Qtile config to .config dir
-cd
-mkdir ~/.config/qtile
-cp ~/qtile/libqtile/resources/default_config.py ~/.config/qtile/config.py
+#cd
+#mkdir ~/.config/qtile
+#cp ~/qtile/libqtile/resources/default_config.py ~/.config/qtile/config.py
 
 ## adding startx
 echo 'qtile start' > ~/.xinitrc
 
 # Install Nerd Fonts
-source ~/qtile-debian/nerdfonts.sh
+# source ~/qtile-debian/nerdfonts.sh
 
 sudo apt autoremove
 
