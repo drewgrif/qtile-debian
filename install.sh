@@ -82,16 +82,34 @@ git clone https://github.com/qtile/qtile
 cd qtile
 pip3 install .
 
-## add Qtile config to .config dir
-#cd
-#mkdir ~/.config/qtile
-#cp ~/qtile/libqtile/resources/default_config.py ~/.config/qtile/config.py
+# Install Lightdm Console Display Manager
+sudo apt install -y lightdm
+sudo systemctl enable lightdm
 
-## adding startx
-echo 'qtile start' > ~/.xinitrc
+# XSessions and dwm.desktop
+if [[ ! -d /usr/share/xsessions ]]; then
+    sudo mkdir /usr/share/xsessions
+fi
+
+cat > ./temp << "EOF"
+[Desktop Entry]
+Name=Qtile
+Comment=Qtile Session
+Type=Application
+Keywords=wm;tiling
+EOF
+sudo cp ./temp /usr/share/xsessions/qtile.desktop;rm ./temp
+
+a="Exec=/home/"
+b=${USER}
+c="/.local/bin/qtile start"
+d="${a}${b}${c}"
+
+echo "$d" | sudo tee -a /usr/share/xsessions/qtile.desktop
+
 
 # Install Nerd Fonts
-# source ~/qtile-debian/nerdfonts.sh
+source ~/qtile-debian/nerdfonts.sh
 
 sudo apt autoremove
 
