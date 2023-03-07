@@ -44,9 +44,9 @@ sudo apt install -y exa
 
 # Printing and bluetooth (if needed)
 # sudo apt install -y cups
-sudo apt install -y bluez blueman
+# sudo apt install -y bluez blueman
 
-sudo systemctl enable bluetooth
+# sudo systemctl enable bluetooth
 # sudo systemctl enable cups
 
 # Browser Installation (eg. chromium)
@@ -75,6 +75,7 @@ xdg-user-dirs-update
 sudo apt install -y python-dbus-dev
 pip3 install xcffib
 pip3 install --no-cache-dir cairocffi
+pip install psutil
 
 ## Qtile install from github
 cd
