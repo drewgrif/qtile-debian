@@ -87,6 +87,8 @@ cd
 mkdir ~/.config/qtile
 cp ~/qtile/libqtile/resources/default_config.py ~/.config/qtile/config.py
 
+## adding startx
+echo 'qtile start' > ~/.xinitrc
 
 # Install Nerd Fonts
 source ~/qtile-debian/nerdfonts.sh
