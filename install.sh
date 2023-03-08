@@ -44,9 +44,9 @@ sudo apt install -y exa
 
 # Printing and bluetooth (if needed)
 # sudo apt install -y cups
-sudo apt install -y bluez blueman
+# sudo apt install -y bluez blueman
 
-sudo systemctl enable bluetooth
+# sudo systemctl enable bluetooth
 # sudo systemctl enable cups
 
 # Browser Installation (eg. chromium)
@@ -75,6 +75,7 @@ xdg-user-dirs-update
 sudo apt install -y python-dbus-dev
 pip3 install xcffib
 pip3 install --no-cache-dir cairocffi
+pip install psutil
 
 ## Qtile install from github
 cd
@@ -82,34 +83,11 @@ git clone https://github.com/qtile/qtile
 cd qtile
 pip3 install .
 
-# Install Lightdm Console Display Manager
-sudo apt install -y lightdm
-sudo systemctl enable lightdm
-
-# XSessions and dwm.desktop
-if [[ ! -d /usr/share/xsessions ]]; then
-    sudo mkdir /usr/share/xsessions
-fi
-
-cat > ./temp << "EOF"
-[Desktop Entry]
-Name=Qtile
-Comment=Qtile Session
-Type=Application
-Keywords=wm;tiling
-EOF
-sudo cp ./temp /usr/share/xsessions/qtile.desktop;rm ./temp
-
-a="Exec=/home/"
-b=${USER}
-c="/.local/bin/qtile start"
-d="${a}${b}${c}"
-
-echo "$d" | sudo tee -a /usr/share/xsessions/qtile.desktop
-
+## adding .xinitrc
+echo 'qtile start' > ~/.xinitrc
 
 # Install Nerd Fonts
-source ~/qtile-debian/nerdfonts.sh
+# source ~/qtile-debian/nerdfonts.sh
 
 sudo apt autoremove
 
