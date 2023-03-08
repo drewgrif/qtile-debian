@@ -4,10 +4,10 @@
 # Install packages after installing base Debian with no GUI
 
 # xorg display server installation
-sudo apt install -y xorg
+sudo apt install -yy xorg
 
 # INCLUDES make,etc.
-sudo apt install -y python3-pip 
+sudo apt install -yy python3-pip 
 
 # Microcode for Intel/AMD 
 # sudo apt install -y amd64-microcode
@@ -46,7 +46,7 @@ sudo apt install -y exa
 # sudo apt install -y cups
 # sudo apt install -y bluez blueman
 
-# sudo systemctl enable bluetooth
+# t-mobisudo systemctl enable bluetooth
 # sudo systemctl enable cups
 
 # Browser Installation (eg. chromium)
