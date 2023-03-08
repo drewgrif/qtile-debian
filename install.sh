@@ -71,9 +71,6 @@ sudo apt install -y fonts-font-awesome fonts-ubuntu fonts-liberation2 fonts-libe
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
 
-# Install Nerd Fonts
-# source ~/qtile-debian/nerdfonts.sh
-
 ## Qtile install dependencies
 sudo apt install -y python-dbus-dev
 pip3 install xcffib
