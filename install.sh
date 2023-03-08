@@ -35,7 +35,7 @@ sudo apt install -y xfce4-terminal
 sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
 
 # Neofetch/HTOP
-sudo apt install -y neofetch htop
+sudo apt install -y neofetch
 
 # EXA installation
 # replace ls command in .bashrc file with line below
@@ -66,7 +66,7 @@ sudo apt install -y micro
 # sudo apt install -y neovim
 
 # Install fonts and papirus icon theme and arc-theme
-sudo apt install fonts-font-awesome fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus papirus-icon-theme arc-theme
+sudo apt install -y fonts-font-awesome fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus papirus-icon-theme arc-theme
 
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
