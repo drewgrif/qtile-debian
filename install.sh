@@ -59,17 +59,20 @@ sudo apt install -y feh
 # sudo apt install -y nitrogen 
 
 # Packages needed qtile after installation
-sudo apt install -y picom suckless-tools dunst libnotify-bin unzip scrot geany
+sudo apt install -y picom dunst suckless-tools libnotify-bin unzip scrot geany geany-plugin-treebrowser
 
 # Command line text editor -- nano preinstalled  -- I like micro but vim is great
 sudo apt install -y micro
 # sudo apt install -y neovim
 
 # Install fonts and papirus icon theme and arc-theme
-sudo apt install -y fonts-font-awesome fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus papirus-icon-theme arc-theme
+sudo apt install -y fonts-font-awesome fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus
 
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
+
+# Install Nerd Fonts
+# source ~/qtile-debian/nerdfonts.sh
 
 ## Qtile install dependencies
 sudo apt install -y python-dbus-dev
@@ -86,8 +89,6 @@ pip3 install .
 ## adding .xinitrc
 echo 'qtile start' > ~/.xinitrc
 
-# Install Nerd Fonts
-# source ~/qtile-debian/nerdfonts.sh
 
 sudo apt autoremove
 
