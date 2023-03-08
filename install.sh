@@ -65,8 +65,8 @@ sudo apt install -y picom suckless-tools dunst libnotify-bin unzip scrot geany
 sudo apt install -y micro
 # sudo apt install -y neovim
 
-# Install fonts and papirus icon theme
-sudo apt install fonts-font-awesome fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus papirus-icon-theme
+# Install fonts and papirus icon theme and arc-theme
+sudo apt install fonts-font-awesome fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus papirus-icon-theme arc-theme
 
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
