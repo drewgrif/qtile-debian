@@ -59,14 +59,14 @@ sudo apt install -y feh
 # sudo apt install -y nitrogen 
 
 # Packages needed qtile after installation
-sudo apt install -y picom suckless-tools dunst libnotify-bin unzip scrot
+sudo apt install -y picom suckless-tools dunst libnotify-bin unzip scrot geany
 
 # Command line text editor -- nano preinstalled  -- I like micro but vim is great
 sudo apt install -y micro
 # sudo apt install -y neovim
 
-# Install fonts
-sudo apt install fonts-font-awesome fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus 
+# Install fonts and papirus icon theme
+sudo apt install fonts-font-awesome fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus papirus-icon-theme
 
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
