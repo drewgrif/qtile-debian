@@ -59,7 +59,7 @@ sudo apt install -y feh
 # sudo apt install -y nitrogen 
 
 # Packages needed qtile after installation
-sudo apt install -y picom dunst suckless-tools libnotify-bin unzip scrot geany geany-plugin-treebrowser
+sudo apt install -y picom dunst sxhkd rofi suckless-tools libnotify-bin unzip scrot geany geany-plugin-treebrowser
 
 # Command line text editor -- nano preinstalled  -- I like micro but vim is great
 sudo apt install -y micro
