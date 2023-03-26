@@ -4,10 +4,17 @@
 # Install packages after installing base Debian with no GUI
 
 # xorg display server installation
-sudo apt install -y xorg
+sudo apt install -y xserver-xorg xinit
 
 # INCLUDES make,etc.
 sudo apt install -y python3-pip 
+
+# Qtile requirements
+sudo apt install libpangocairo-1.0-0
+sudo apt install python3-pip python3-xcffib python3-cairocffi
+
+# Install qtile
+pip install qtile
 
 # Microcode for Intel/AMD 
 # sudo apt install -y amd64-microcode
@@ -71,20 +78,22 @@ sudo apt install -y fonts-font-awesome fonts-ubuntu fonts-liberation2 fonts-libe
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
 
-## Qtile install dependencies
-sudo apt install -y python-dbus-dev
-pip3 install xcffib
-pip3 install --no-cache-dir cairocffi
-pip install psutil
+# Installing Lightdm
+sudo apt install lightdm
+sudo systemctl enable lightdm
 
-## Qtile install from github
-cd
-git clone https://github.com/qtile/qtile
-cd qtile
-pip3 install .
+# Adding qtile.desktop to Lightdm xsessions directory
+cat > ./temp << "EOF"
+[Desktop Entry]
+Name=Qtile
+Comment=Qtile Session
+Type=Application
+Keywords=wm;tiling
+EOF
+sudo cp ./temp /usr/share/xsessions/qtile.desktop;rm ./temp
+u=$USER
+sudo echo "Exec=/home/$u/.local/bin/qtile start" | sudo tee -a /usr/share/xsessions/qtile.desktop
 
-## adding .xinitrc
-echo 'qtile start' > ~/.xinitrc
 
 
 sudo apt autoremove
