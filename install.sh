@@ -79,7 +79,7 @@ sudo apt install -y fonts-font-awesome fonts-ubuntu fonts-liberation2 fonts-libe
 xdg-user-dirs-update
 
 # Installing Lightdm
-sudo apt install lightdm
+sudo apt install lightdm -y
 sudo systemctl enable lightdm
 
 # Adding qtile.desktop to Lightdm xsessions directory
