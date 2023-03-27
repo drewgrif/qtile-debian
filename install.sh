@@ -14,7 +14,7 @@ sudo apt install libpangocairo-1.0-0
 sudo apt install python3-pip python3-xcffib python3-cairocffi
 
 # Install qtile
-pip install qtile
+pip3 install qtile
 
 # Microcode for Intel/AMD 
 # sudo apt install -y amd64-microcode
