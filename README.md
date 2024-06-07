@@ -1,6 +1,6 @@
-Qtile installion using shell script
+# This Installation was ONLY INTENDED FOR DEBIAN BULLSEYE (11) 
 
-works great with Debian Stable
+**RECOMMENDED: USE THE bookworm-scripts for an updated qtile install.**
 
 
 ==============================
